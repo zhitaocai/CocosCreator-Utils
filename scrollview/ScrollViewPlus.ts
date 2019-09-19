@@ -43,11 +43,19 @@ export default class ScrollViewPlus extends cc.ScrollView {
 		this.optDc();
 	}
 
+	/**
+	 * 优化 ScrollView Content 节点 DC，可以手动调用
+	 */
 	public optDc() {
 		ScrollViewPlus.optDc(this, this.caculatePosition);
 	}
 
-	public isNodeInScrollView(node: cc.Node): boolean {
+	/**
+	 * 判断指定的节点是否在ScrollView可视范围内，哪怕只是可视一点，也返回true，完全不见就返回false
+	 *
+	 * @param targetNode 待判断节点
+	 */
+	public isNodeVisiable(node: cc.Node): boolean {
 		return ScrollViewPlus.isNodeVisiable(this, node);
 	}
 

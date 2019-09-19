@@ -1,6 +1,6 @@
 # Cocos Creator Utils
 
-[![](https://img.shields.io/badge/Release-0.1.0-orange.svg)](https://github.com/zhitaocai/CocosCreator-ScrollVIewPlus/blob/master/CHANGELOG.md)
+[![](https://img.shields.io/badge/Release-0.2.0-orange.svg)](https://github.com/zhitaocai/CocosCreator-ScrollVIewPlus/blob/master/CHANGELOG.md)
 [![](https://img.shields.io/badge/Support-Cocos%20Creator%20v2.x-orange.svg)](http://www.cocos.com/creator)
 [![](https://img.shields.io/badge/LICENSE-MIT-green.svg)](https://github.com/zhitaocai/CocosCreator-Utils/blob/master/LICENSE)
 
@@ -8,6 +8,7 @@
 
 | 工具                | 生效版本 | 功能描述           |
 | ------------------- | -------- | ------------------ |
+| res                 | 0.2.0    | 资源加载工具类     |
 | i18n                | 0.1.0    | 简易版 i18n        |
 | multiresolution     | 0.1.0    | 多分辨率适配       |
 | scrollview          | 0.1.0    | ScrollView优化组件 |
@@ -18,12 +19,6 @@
 ## 支持作者
 
 如果我的项目对你起到帮助，不妨支持一下我吧~
-
-🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏
-
-![](./static/Pay.png)
-
-
 
 ## LICENSE
 
