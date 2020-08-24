@@ -77,9 +77,11 @@ cd YourCocosCreatorProject
 git commit -am 'update Cocos Creator Utils Demo'
 ```
 
-### 1.5 重新拉下（/下载）你的 Cocos Creator 项目
+### 1.5 重新下载/更新你的 Cocos Creator 项目
 
-在你完成了步骤 1.3 后，你的 Cocos Creator 项目中已经依赖了本项目。**当你（或其他人）在重新拉下（/下载）本项目时，使用的命令将会发生变化。**
+在你完成了步骤 1.3 后，你的 Cocos Creator 项目中已经依赖了本项目。
+
+**当你（或其他人）在重新下载本项目时，使用的命令将会发生变化。**
 
 加入 Submodule 之前，首次下载你的 Cocos Creator 项目的命令可能会是这样子：
 
@@ -95,6 +97,24 @@ git clone git@YourCocosCreatorProject.git
 # 此命令为初始化并下载Submodule的内容到本地
 git submodule update --init
 ```
+
+**当你（或其他人）需要同步远程仓库时，使用命令同样发生变化。**
+
+加入 Submodule 之前，同步远程仓库中你的 Cocos Creator 项目master分支内容到本地仓库时，你的命令可能会是这样子：
+
+```
+git checkout master
+git pull origin master 
+```
+
+在加入 Submodule 之后，还需要同时更新一下 Submodule
+
+```
+git checkout master
+git pull origin master 
+git submodule update --init
+```
+
 
 ## LICENSE
 
