@@ -29,9 +29,7 @@ cd YourCocosCreatorProject
 git submodule add git@github.com:zhitaocai/CocosCreator-Utils.git assets/scripts/ccutils
 ```
 
-正常情况下，此时你会导入本项目的 **master** 分支内容到你的 Cocos Creator 项目中。本项目严格按照 [GitFlow](https://github.com/nvie/gitflow) 去进行开发，因此，master 分支就是本项目的最新稳定代码。
-
-此时，回到你的 Cocos Creator 编辑器中，即可发现已经存在本项目的相关代码。你可以通过下面命令，查看你的 Submodule 的状态
+正常情况下，此时你会导入本项目的 **master** 分支内容到你的 Cocos Creator 项目中。本项目严格按照 [GitFlow](https://github.com/nvie/gitflow) 去进行开发，因此，master 分支就是本项目的最新稳定代码。此时，回到你的 Cocos Creator 编辑器中，即可发现已经存在本项目的相关代码。你可以通过下面命令，查看你的 Submodule 的状态
 
 ```
 git submodule status
