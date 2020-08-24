@@ -63,8 +63,8 @@ git commit -m 'add Cocos Creator Utils Submodule'
 本项目会持续更新，如果你想在你的 Cocos Creator 项目中使用采用本项目的最新版本，那么可以通过以下步骤去更新本项目：
 
 1. 进入你的 Cocos Creator 中存放本项目的目录
-2. 通过 git pull 命令去更新本想目
-3. 回到你的 Cocos Creator 项目，发起一个commit，以完成 Submodule 的更新
+2. 通过 git pull 命令去更新本项目
+3. 回到你的 Cocos Creator 项目，发起一个 commit，以完成 Submodule 的更新
 
 参考命令：
 
@@ -74,7 +74,7 @@ git fetch
 git checkout master 
 git pull
 cd YourCocosCreatorProject
-git commit -am 'update Cocos Creator Utils Demo'
+git commit -am 'update Cocos Creator Utils Submodule'
 ```
 
 ### 1.5 重新下载你的 Cocos Creator 项目
