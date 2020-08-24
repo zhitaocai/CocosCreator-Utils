@@ -26,27 +26,14 @@ const { ccclass, property } = cc._decorator;
  */
 @ccclass
 export default class ScreenAreaAdapterComponent extends cc.Component {
-    /**
-     * 设计分辨率下，节点的宽度
-     */
-    private _designWidth: number = 0;
-
-    /**
-     * 设计分辨率下，节点的高度
-     */
-    private _designHeight: number = 0;
-
     onLoad() {
-        // 初始化节点在设计分辨率下的宽高
-        this._designWidth = this.node.width;
-        this._designHeight = this.node.height;
-
         // 进行一次适配
         this._onResize();
     }
 
     onEnable() {
-        cc.view.setResizeCallback(this._onResize);
+        let onResize = this._onResize.bind(this);
+        cc.view.setResizeCallback(onResize);
         // window.addEventListener("resize", this._onResize);
         // window.addEventListener("orientationchange", this._onResize);
     }
@@ -70,9 +57,11 @@ export default class ScreenAreaAdapterComponent extends cc.Component {
         // }
 
         // 1. 计算 SHOW_ALL 模式下，本节点缩放到完全能显示节点所有内容的实际缩放值
+        let designWidth = cc.view.getVisibleSize().width;
+        let designHeight = cc.view.getVisibleSize().height;
         let canvasWidth = cc.view.getCanvasSize().width;
         let canvasHeight = cc.view.getCanvasSize().height;
-        let scaleForShowAll = Math.min(canvasWidth / this._designWidth, canvasHeight / this._designHeight);
+        let scaleForShowAll = Math.min(canvasWidth / designWidth, canvasHeight / designHeight);
 
         // 2. 根据缩放值，重新设置节点的宽高
         this.node.width = canvasWidth / scaleForShowAll;
