@@ -1,5 +1,12 @@
 const { ccclass, property } = cc._decorator;
 
+export type ScreenShotModel = {
+    /**
+     * 图片 base64 编码字符串
+     */
+    base64String: string;
+};
+
 /**
  * @author caizhitao
  * @classdesc 截图组件
@@ -244,10 +251,3 @@ export default class ScreenShotComponent extends cc.Component {
         });
     }
 }
-
-export type ScreenShotModel = {
-    /**
-     * 图片 base64 编码字符串
-     */
-    base64String: string;
-};
