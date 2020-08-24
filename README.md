@@ -16,7 +16,9 @@
 | ScreenShotComponent | 0.1.0    | 截屏组件           |
 
 
-## 1. 使用说明
+## 1. 本项目安装/更新说明
+
+本项目将会使用 [Git Submodule](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97) 的形式进行导入，如果你已经很熟悉使用 Git Submodule ，那么可以跳过本章节。为了备忘，我同样也罗列了一下使用过程，希望能对大家的使用带来帮助。
 
 ### 1.1. 添加本子模块到你的 CocosCreator 项目中
 
@@ -25,10 +27,10 @@ cd YourCocosCreatorProject
 git submodule add git@github.com:zhitaocai/CocosCreator-Utils.git assets/scripts/ccutils
 ```
 
-上述命令为将本项目通过 [GitSubmodule](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97) 形式导入到你的 CocosCreator 项目中，并指定了存放路径为 ``YourCocosCreatorProject/assets/scripts/ccutils`` （当然，你也可以更换到其他路径）
+上述命令为将本项目通过 [Git Submodule](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97) 形式导入到你的 CocosCreator 项目中，并指定了存放路径为 ``YourCocosCreatorProject/assets/scripts/ccutils`` （当然，你也可以更换到其他路径）
 
 
-### 1.2 切换 Tag（可选）
+### 1.2 切换本项目 Tag（可选）
 
 正常情况下，此时你会导入本项目的 **master** 分支内容到你的 CocosCreator 项目中。本项目严格按照 [GitFlow](https://github.com/nvie/gitflow) 去进行开发，因此，master 分支就是本项目的最新稳定代码。当然，如果你遇到了 master 分支的代码可能不好使之类的情况时，你也可以你的需要和本项目的 [CHANGELOG](CHANGELOG.md) 去选择一个合适的 tag 去使用。如：
 
@@ -54,15 +56,44 @@ git add .
 git commit -m 'add Cocos Creator Utils Submodule'
 ```
 
-至此，已经完成了将本仓库导入到你的 Cocos Creator 项目中
-
+至此，你已经完成了将本仓库导入到你的 Cocos Creator 项目中。
 
 ### 1.4 更新本 Submodule 
 
-本项目可能会一致更新提交，如果你想在的你的 Cocos Creator 项目中尽可能采用本项目的最新版本，那么可以通过以下命令去更新本项目
+本项目会持续更新，如果你想在你的 Cocos Creator 项目中使用采用本项目的最新版本，那么可以通过以下步骤去更新本项目：
+
+1. 进入你 Cocos Creator 中存放本项目的目录
+2. 通过 git pull 命令去更新本想目
+3. 回到你 Cocos Creator 项目，发起一个commit，以完成 Submodule 的更新
+
+参考命令：
 
 ```
-git submodule update
+cd YourCocosCreatorProject/assets/scripts/ccutils
+git fetch
+git checkout master 
+git pull
+cd YourCocosCreatorProject
+git commit -am 'update Cocos Creator Utils Demo'
+```
+
+### 1.5 重新拉下你的 Cocos Creator 项目
+
+在你完成了步骤 1.3 后，你的 Cocos Creator 项目中已经依赖了本项目。**当你（或其他人）在新的机器上，拉下本项目时，命令将会发生变化。**
+
+加入 Submodule 之前，首次下载你的 Cocos Creator 项目的命令可能会是这样子：
+
+```
+git clone git@YourCocosCreatorProject.git
+```
+
+加入 Submodule 之后，首次下载你的 Cocos Creator 项目命令将会是这样子：
+
+```
+git clone git@YourCocosCreatorProject.git
+
+# 此命令为初始化并下载Submodule的内容到本地
+git submodule update --init
 ```
 
 ## LICENSE
