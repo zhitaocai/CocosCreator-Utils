@@ -1,4 +1,4 @@
-import ScrollViewPlusItem from "./ScrollViewPlusItem";
+import ScrollViewPlusItemComponent from "./ScrollViewPlusItemComponent";
 
 const { ccclass, property } = cc._decorator;
 
@@ -18,7 +18,7 @@ const { ccclass, property } = cc._decorator;
  *          * 控制可视区域Item显示（透明度改为 255 ），非可视区域Item隐藏（透明度改为 0 ）
  */
 @ccclass
-export default class ScrollViewPlus extends cc.ScrollView {
+export default class ScrollViewPlusComponent extends cc.ScrollView {
     @property({
         tooltip: "是否计算在可视区域中Item的相对位置（可能会相对耗性能）",
     })
@@ -41,7 +41,7 @@ export default class ScrollViewPlus extends cc.ScrollView {
     }
 
     public optDc() {
-        ScrollViewPlus.optDc(this, this.caculatePosition);
+        ScrollViewPlusComponent.optDc(this, this.caculatePosition);
     }
 
     /**
@@ -50,7 +50,7 @@ export default class ScrollViewPlus extends cc.ScrollView {
      * @param targetNode 目标节点
      */
     public isNodeVisiable(node: cc.Node): boolean {
-        return ScrollViewPlus.isNodeVisiable(this, node);
+        return ScrollViewPlusComponent.isNodeVisiable(this, node);
     }
 
     /**
@@ -96,7 +96,7 @@ export default class ScrollViewPlus extends cc.ScrollView {
         // 遍历 ScrollView Content 内容节点的子节点，对每个子节点的包围盒做和 ScrollView 可视区域包围盒做碰撞判断
         scrollView.content.children.forEach((childNode: cc.Node) => {
             // 没有绑定指定组件的子节点不处理
-            let itemComponent = childNode.getComponent(ScrollViewPlusItem);
+            let itemComponent = childNode.getComponent(ScrollViewPlusItemComponent);
             if (itemComponent == null) {
                 return;
             }

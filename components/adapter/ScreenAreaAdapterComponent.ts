@@ -25,7 +25,7 @@ const { ccclass, property } = cc._decorator;
     ```
  */
 @ccclass
-export default class ScreenAreaAdapter extends cc.Component {
+export default class ScreenAreaAdapterComponent extends cc.Component {
     /**
      * 设计分辨率下，节点的宽度
      */

@@ -12,7 +12,7 @@ const { ccclass, property } = cc._decorator;
  *
  */
 @ccclass
-export default class ScrollViewPlusItem extends cc.Component {
+export default class ScrollViewPlusItemComponent extends cc.Component {
     @property({
         type: [cc.Component.EventHandler],
         tooltip: "进入ScrollView时回调",

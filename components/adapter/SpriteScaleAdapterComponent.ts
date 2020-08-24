@@ -50,7 +50,7 @@ export enum SpriteAlignType {
  * @classdesc Sprite 适配组件
  */
 @ccclass
-export default class SpriteScaleAdapter extends cc.Component {
+export default class SpriteScaleAdapterComponent extends cc.Component {
     @property({
         type: cc.Enum(SpriteScaleType),
         tooltip:

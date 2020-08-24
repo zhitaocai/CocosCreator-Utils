@@ -14,18 +14,18 @@ const { ccclass, property } = cc._decorator;
  * 1. 将节点的宽高设置为安全区域的宽高
  */
 @ccclass
-export default class SafeAreaAdapter extends cc.Component {
+export default class SafeAreaAdapterComponent extends cc.Component {
     onLoad() {
         // 将屏幕尺寸下的安全区域大小，转换为设计分辨率下的大小，重新给节点设置大小
-        this.node.width = SafeAreaAdapter.safeArea.safeAreaWidth / SafeAreaAdapter.safeArea.designPxToScreenPxRatio;
-        this.node.height = SafeAreaAdapter.safeArea.safeAreaHeight / SafeAreaAdapter.safeArea.designPxToScreenPxRatio;
+        this.node.width = SafeAreaAdapterComponent.safeArea.safeAreaWidth / SafeAreaAdapterComponent.safeArea.designPxToScreenPxRatio;
+        this.node.height = SafeAreaAdapterComponent.safeArea.safeAreaHeight / SafeAreaAdapterComponent.safeArea.designPxToScreenPxRatio;
 
         // 根据安全区域的 margin 设置节点的偏移，使重置宽高后的节点位置在安全中心
         // 需要将屏幕尺寸下的像素值转换为设计费分辨率下的像素值
         this.node.setPosition(
             cc.v2(
-                SafeAreaAdapter.safeArea.safeAreaXOffset / SafeAreaAdapter.safeArea.designPxToScreenPxRatio,
-                SafeAreaAdapter.safeArea.safeAreaYOffset / SafeAreaAdapter.safeArea.designPxToScreenPxRatio
+                SafeAreaAdapterComponent.safeArea.safeAreaXOffset / SafeAreaAdapterComponent.safeArea.designPxToScreenPxRatio,
+                SafeAreaAdapterComponent.safeArea.safeAreaYOffset / SafeAreaAdapterComponent.safeArea.designPxToScreenPxRatio
             )
         );
     }
