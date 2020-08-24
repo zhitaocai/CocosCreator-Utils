@@ -22,20 +22,14 @@
 
 ### 1.1 添加子模块到你的 Cocos Creator 项目中
 
+通过下面命令，本项目将会以 Submodule 的形式加入到你的 Cocos Creator 项目中，并且存放在 ``YourCocosCreatorProject/assets/scripts/ccutils`` （当然，你也可以更换到其他路径）
+
 ```
 cd YourCocosCreatorProject
 git submodule add git@github.com:zhitaocai/CocosCreator-Utils.git assets/scripts/ccutils
 ```
 
-上述命令为将本项目通过 [Git Submodule](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97) 形式导入到你的 CocosCreator 项目中，并指定了存放路径为 ``YourCocosCreatorProject/assets/scripts/ccutils`` （当然，你也可以更换到其他路径）
-
-
-正常情况下，此时你会导入本项目的 **master** 分支内容到你的 Cocos Creator 项目中。本项目严格按照 [GitFlow](https://github.com/nvie/gitflow) 去进行开发，因此，master 分支就是本项目的最新稳定代码。当然，如果你遇到了 master 分支的代码可能不好使之类的情况时，你也可以你的需要和本项目的 [CHANGELOG](CHANGELOG.md) 去选择一个合适的 tag 去使用。如：
-
-```
-cd YourCocosCreatorProject/assets/scripts/ccutils
-git checkout 0.2.0
-```
+正常情况下，此时你会导入本项目的 **master** 分支内容到你的 Cocos Creator 项目中。本项目严格按照 [GitFlow](https://github.com/nvie/gitflow) 去进行开发，因此，master 分支就是本项目的最新稳定代码。
 
 此时，回到你的 Cocos Creator 编辑器中，即可发现已经存在本项目的相关代码。你可以通过下面命令，查看你的 Submodule 的状态
 
@@ -71,6 +65,14 @@ git checkout master
 git pull
 cd YourCocosCreatorProject
 git commit -am 'update Cocos Creator Utils Submodule'
+```
+
+当然，如果你遇到了 master 分支的代码可能不好使之类的情况时，你也可以根据你的需求和本项目的 [CHANGELOG](CHANGELOG.md) 去选择一个合适的 tag 去使用。如：
+
+```
+cd YourCocosCreatorProject/assets/scripts/ccutils
+git checkout 0.2.0
+git commit -am 'update Cocos Creator Utils Submodule to 0.2.0'
 ```
 
 ### 1.3 下载你的 Cocos Creator 项目
