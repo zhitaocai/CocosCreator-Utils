@@ -77,9 +77,9 @@ cd YourCocosCreatorProject
 git commit -am 'update Cocos Creator Utils Demo'
 ```
 
-### 1.5 重新拉下你的 Cocos Creator 项目
+### 1.5 重新拉下（/下载）你的 Cocos Creator 项目
 
-在你完成了步骤 1.3 后，你的 Cocos Creator 项目中已经依赖了本项目。**当你（或其他人）在新的机器上，拉下本项目时，命令将会发生变化。**
+在你完成了步骤 1.3 后，你的 Cocos Creator 项目中已经依赖了本项目。**当你（或其他人）在重新拉下（/下载）本项目时，使用的命令将会发生变化。**
 
 加入 Submodule 之前，首次下载你的 Cocos Creator 项目的命令可能会是这样子：
 
