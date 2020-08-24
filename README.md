@@ -1,6 +1,6 @@
 # Cocos Creator Utils
 
-[![](https://img.shields.io/badge/Release-0.2.0-orange.svg)](https://github.com/zhitaocai/CocosCreator-ScrollVIewPlus/blob/master/CHANGELOG.md)
+[![](https://img.shields.io/badge/Release-0.2.0-orange.svg)](https://github.com/zhitaocai/CocosCreator-Utils/blob/master/CHANGELOG.md)
 [![](https://img.shields.io/badge/Support-Cocos%20Creator%20v2.x-orange.svg)](http://www.cocos.com/creator)
 [![](https://img.shields.io/badge/LICENSE-MIT-green.svg)](https://github.com/zhitaocai/CocosCreator-Utils/blob/master/LICENSE)
 
@@ -14,6 +14,18 @@
 | scrollview          | 0.1.0    | ScrollView优化组件 |
 | EnhancedComponent   | 0.1.0    | 增强型组件         |
 | ScreenShotComponent | 0.1.0    | 截屏组件           |
+
+## 添加本子模块到你的 CocosCreator 项目中
+
+e.g. 
+
+将本子模块加入到你的 ``YourCocosCreatorProject/assets/scripts/ccutils`` 目录中
+
+```
+cd YourCocosCreatorProject
+git submodule add git@github.com:zhitaocai/CocosCreator-Utils.git assets/scripts/ccutils
+```
+
 
 
 ## 支持作者
