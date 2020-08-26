@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.3.2
+
+1. 重命名 StatePageViewIndicator -> StatePageViewIndicatorComponent
+
 ## 0.3.1 
 
 1. 注释部分未使用类
