@@ -3,7 +3,12 @@ import { I18n } from "./I18n";
 const { ccclass, property } = cc._decorator;
 
 /**
- * 挂载在含有 Label 组件的节点下，会自动将 Label 的语言更新为当前指定的文本id下的语言
+ * @author zhitaocai
+ * @classdesc 简易版 I18N Label
+ *
+ * 用法：
+ *
+ * 1. 挂载在含有 Label 组件的节点下，会自动将 Label 的语言更新为当前指定的文本id下的语言
  */
 @ccclass
 export default class I18nLocalizedLabelComponent extends cc.Component {

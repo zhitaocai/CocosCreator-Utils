@@ -1,5 +1,5 @@
 /**
- * @author caizhitao
+ * @author zhitaocai
  * @classdesc 事件管理器
  * @description
  * 

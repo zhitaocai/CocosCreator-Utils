@@ -8,7 +8,7 @@ export type ScreenShotModel = {
 };
 
 /**
- * @author caizhitao
+ * @author zhitaocai
  * @classdesc 截图组件
  * @description
  *

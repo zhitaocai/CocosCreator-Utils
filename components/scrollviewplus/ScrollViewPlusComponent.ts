@@ -3,7 +3,7 @@ import ScrollViewPlusItemComponent from "./ScrollViewPlusItemComponent";
 const { ccclass, property } = cc._decorator;
 
 /**
- * @author caizhitao
+ * @author zhitaocai
  * @classdesc 只渲染可视区域的ScrollView
  * @description
  *

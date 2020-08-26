@@ -1,7 +1,6 @@
 const { ccclass, property } = cc._decorator;
 
 /**
- *
  * @author zhitaocai
  * @class 自定义状态 PageView Indicator
  * @classdesc 支持选中状态、不选中状态下采用不同的精灵

@@ -1,6 +1,6 @@
 const { ccclass, property } = cc._decorator;
 /**
- * @author caizhitao
+ * @author zhitaocai
  * @classdesc 增强 cc.Component 组件
  * @description
  *

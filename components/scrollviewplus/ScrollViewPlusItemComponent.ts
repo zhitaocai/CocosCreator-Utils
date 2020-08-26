@@ -1,7 +1,7 @@
 const { ccclass, property } = cc._decorator;
 
 /**
- * @author caizhitao
+ * @author zhitaocai
  * @classdesc 配合「ScrollViewPlus」组件使用的ScrollViewItem组件
  * @description
  *

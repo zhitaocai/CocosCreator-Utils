@@ -3,7 +3,7 @@ import SafeAreaAdapterComponent from "./SafeAreaAdapterComponent";
 const { ccclass, property } = cc._decorator;
 
 /**
- * @author caizhitao
+ * @author zhitaocai
  * @classdesc  安全区域适配Widget
  * @description
  *

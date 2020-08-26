@@ -46,7 +46,7 @@ export enum SpriteAlignType {
 }
 
 /**
- * @author caizhitao
+ * @author zhitaocai
  * @classdesc Sprite 适配组件
  */
 @ccclass

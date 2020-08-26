@@ -2,7 +2,6 @@
  * @author zhitaocai
  * @class 数组工具类
  */
-
 export class ArrayUtil {
     /**
      * 打乱数组顺序，利用 Fisher–Yates shuffle 洗牌算法

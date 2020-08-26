@@ -1,7 +1,8 @@
 import I18nLocalizedLabelComponent from "./I18nLocalizedLabelComponent";
 
 /**
- * 简易版 I18N 语言管理器
+ * @author zhitaocai
+ * @classdesc 简易版 I18N 语言管理器
  */
 export class I18n {
     private static sCurLanguagePackageeJson: any = {};

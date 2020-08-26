@@ -1,7 +1,7 @@
 const { ccclass, property } = cc._decorator;
 
 /**
- * @author caizhitao
+ * @author zhitaocai
  * @classdesc 游戏主内容节点自适应所有分辨率的脚本
  * @description
  *

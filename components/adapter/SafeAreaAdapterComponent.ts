@@ -1,7 +1,7 @@
 const { ccclass, property } = cc._decorator;
 
 /**
- * @author caizhitao
+ * @author zhitaocai
  * @classdesc  安全区域适配组件
  * @description
  *
