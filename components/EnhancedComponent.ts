@@ -1,11 +1,14 @@
 const { ccclass, property } = cc._decorator;
-@ccclass
-
 /**
- * 增强型组件
+ * @author zhitaocai
+ * @classdesc 增强 cc.Component 组件
+ * @description
  *
  * 额外附加一些方法
+ *
+ * * executePreFrame
  */
+@ccclass
 export abstract class EnhancedComponent extends cc.Component {
     /**
      * 分帧执行 Generator 逻辑
