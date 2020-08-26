@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.3.0 
+
+1. 新增 geometric ，用于存放数学几何相关类
+2. 整理 components ， 用于存放组件类
+3. 新增 models ，用于存放一些通用数据结构（如：Stack，Queue）
+4. 新增 common ，用于存放一些工具类
+
 ## 0.2.0 
 
 1. 加入资源加载工具类
