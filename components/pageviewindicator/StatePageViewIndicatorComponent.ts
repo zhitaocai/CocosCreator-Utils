@@ -15,7 +15,7 @@ const { ccclass, property } = cc._decorator;
  * * 如果不生效，可能是你在使用的 cc 引擎版本的 cc.PageViewIndicator 的源码 _changedState 方法已经发生改动
  */
 @ccclass
-export default class StatePageViewIndicator extends cc.PageViewIndicator {
+export default class StatePageViewIndicatorComponent extends cc.PageViewIndicator {
     @property({
         type: cc.SpriteFrame,
         tooltip: "默认状态（没有选中）下的精灵",
