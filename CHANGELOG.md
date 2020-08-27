@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.3.4
+
+1. bugfix SpriteScaleAdapterComponent
+
 ## 0.3.3
 
 1. 移除 ResourceLoader
