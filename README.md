@@ -1,6 +1,6 @@
 # Cocos Creator Utils
 
-[![](https://img.shields.io/badge/Release-0.3.4-orange.svg)](https://github.com/zhitaocai/CocosCreator-Utils/blob/master/CHANGELOG.md)
+[![](https://img.shields.io/badge/Release-0.3.5-orange.svg)](https://github.com/zhitaocai/CocosCreator-Utils/blob/master/CHANGELOG.md)
 [![](https://img.shields.io/badge/Support-Cocos%20Creator%20v2.x-orange.svg)](http://www.cocos.com/creator)
 [![](https://img.shields.io/badge/LICENSE-MIT-green.svg)](https://github.com/zhitaocai/CocosCreator-Utils/blob/master/LICENSE)
 
