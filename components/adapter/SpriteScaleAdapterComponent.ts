@@ -75,13 +75,15 @@ export default class SpriteScaleAdapterComponent extends cc.Component {
     }
 
     onEnable() {
-        window.addEventListener("resize", this._onResize);
-        window.addEventListener("orientationchange", this._onResize);
+        let onResize = this._onResize.bind(this);
+        window.addEventListener("resize", onResize);
+        window.addEventListener("orientationchange", onResize);
     }
 
     onDisable() {
-        window.removeEventListener("resize", this._onResize);
-        window.removeEventListener("orientationchange", this._onResize);
+        let onResize = this._onResize.bind(this);
+        window.removeEventListener("resize", onResize);
+        window.removeEventListener("orientationchange", onResize);
     }
 
     private _onResize() {
