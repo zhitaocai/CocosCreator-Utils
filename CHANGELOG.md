@@ -3,6 +3,7 @@
 ## 0.3.3
 
 1. 移除 ResourceLoader
+2. 移除 LocalStorage
 
 ## 0.3.2
 
