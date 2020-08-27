@@ -16,6 +16,23 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class SafeAreaAdapterComponent extends cc.Component {
     onLoad() {
+        this._onResize();
+    }
+
+    onEnable() {
+        let onResize = this._onResize.bind(this);
+        window.addEventListener("resize", onResize);
+        window.addEventListener("orientationchange", onResize);
+    }
+
+    onDisable() {
+        let onResize = this._onResize.bind(this);
+        window.removeEventListener("resize", onResize);
+        window.removeEventListener("orientationchange", onResize);
+    }
+
+    private _onResize() {
+        SafeAreaAdapterComponent.safeArea = null;
         // 将屏幕尺寸下的安全区域大小，转换为设计分辨率下的大小，重新给节点设置大小
         this.node.width = SafeAreaAdapterComponent.safeArea.safeAreaWidth / SafeAreaAdapterComponent.safeArea.designPxToScreenPxRatio;
         this.node.height = SafeAreaAdapterComponent.safeArea.safeAreaHeight / SafeAreaAdapterComponent.safeArea.designPxToScreenPxRatio;
@@ -32,12 +49,16 @@ export default class SafeAreaAdapterComponent extends cc.Component {
 
     private static _safeArea: SafeArea;
 
+    static set safeArea(value: SafeArea) {
+        this._safeArea = null;
+    }
+
     /**
      * 基于屏幕尺寸的安全区域
      *
      * 可以通过 screenPxToDesignPx 转换为基于设计画布尺寸的像素大小
      */
-    public static get safeArea() {
+    static get safeArea() {
         if (!this._safeArea) {
             // 初始屏幕宽高像素
             let screenWidth = cc.view.getCanvasSize().width;
@@ -151,11 +172,11 @@ export default class SafeAreaAdapterComponent extends cc.Component {
         return this._safeArea;
     }
 
-    public static screenPxToDesignPx(screenPx: number) {
+    static screenPxToDesignPx(screenPx: number) {
         return screenPx / this.safeArea.designPxToScreenPxRatio;
     }
 
-    public static designPxToScreenPx(designPx: number) {
+    static designPxToScreenPx(designPx: number) {
         return designPx * this.safeArea.designPxToScreenPxRatio;
     }
 }

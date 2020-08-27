@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.3.5
+
+1. 适配组件都支持 resize 和 orientationchange 的回调处理
+
 ## 0.3.4
 
 1. bugfix SpriteScaleAdapterComponent

@@ -27,21 +27,21 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class ScreenAreaAdapterComponent extends cc.Component {
     onLoad() {
-        // 进行一次适配
         this._onResize();
     }
 
     onEnable() {
         let onResize = this._onResize.bind(this);
-        cc.view.setResizeCallback(onResize);
-        // window.addEventListener("resize", this._onResize);
-        // window.addEventListener("orientationchange", this._onResize);
+        window.addEventListener("resize", onResize);
+        window.addEventListener("orientationchange", onResize);
+        // cc.view.setResizeCallback(onResize);
     }
 
     onDisable() {
-        cc.view.setResizeCallback(null);
-        // window.removeEventListener("resize", this._onResize);
-        // window.removeEventListener("orientationchange", this._onResize);
+        let onResize = this._onResize.bind(this);
+        window.removeEventListener("resize", onResize);
+        window.removeEventListener("orientationchange", onResize);
+        // cc.view.setResizeCallback(null);
     }
 
     /**
