@@ -50,7 +50,7 @@ export class EventManager {
      * @param func 事件处理函数
      * @param target 事件处理函数的执行对象
      */
-    public static on(eventName: string, func: Function, target: any) {
+    public static on(eventName: string, func: Function, target?: any) {
         this._on(eventName, func, target, false);
     }
 
@@ -61,7 +61,7 @@ export class EventManager {
      * @param func 事件处理函数
      * @param target 事件处理函数的执行对象
      */
-    public static onOnce(eventName: string, func: Function, target: any) {
+    public static onOnce(eventName: string, func: Function, target?: any) {
         this._on(eventName, func, target, true);
     }
 
