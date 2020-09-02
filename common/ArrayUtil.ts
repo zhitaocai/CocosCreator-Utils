@@ -8,7 +8,7 @@ export class ArrayUtil {
      *
      * @see https://www.zhihu.com/question/68330851
      */
-    static shuffle<T>(array: T[]): T[] {
+    static shuffle<T>(array: T[]) {
         if (array == null || array.length == 0) {
             throw new Error("invalid array");
         }
@@ -19,6 +19,5 @@ export class ArrayUtil {
             array[i] = array[exchangeIndex];
             array[exchangeIndex] = temp;
         }
-        return array;
     }
 }
